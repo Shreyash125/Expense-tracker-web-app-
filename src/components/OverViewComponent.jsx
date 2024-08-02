@@ -27,7 +27,7 @@ const ExpenseBox = styled.div`
   gap: 10px;
   width: 135px;
   & span {
-    color: ${(props) => (props.isIncome ? "green" : "red")};
+    color: ₹ {(props) => (props.isIncome ? "green" : "red")};
     font-weight: bold;
     font-size: 20px;
   }
@@ -42,7 +42,7 @@ const BalanceBox = styled.div`
   width: 100%;
   font-weight: bold;
   & span {
-    color: ${(props) => (props.balance < 0 ? "red" : "#0d1d2c")};
+    color: ₹ {(props) => (props.balance < 0 ? "red" : "#0d1d2c")};
     opacity: 80%;
     font-weight: bold;
     font-size: 20px;
@@ -63,7 +63,7 @@ const AddTransaction = styled.div`
 
 const AddTransactionContainer = styled.div`
   font-size: 15px;
-  display: ${(props) => (props.isAddTxnVisible ? "flex" : "none")};
+  display: ₹ {(props) => (props.isAddTxnVisible ? "flex" : "none")};
   color: #0d1d2c;
   flex-direction: column;
   border-radius: 4px;
@@ -156,7 +156,7 @@ const OverViewComponent = ({ income, expense, addTransaction }) => {
   return (
     <Container>
       <BalanceBox balance={balance}>
-        Balance: <span>${balance}</span>
+        Balance: <span>₹ {balance}</span>
         <AddTransaction onClick={() => toggleAddTxn((prev) => !prev)}>
           {isAddTxnVisible ? "CANCEL" : "ADD"}
         </AddTransaction>
@@ -172,10 +172,10 @@ const OverViewComponent = ({ income, expense, addTransaction }) => {
       )}
       <ExpenseContainer>
         <ExpenseBox>
-          Expense<span>${expense}</span>
+          Expense<span>₹ {expense}</span>
         </ExpenseBox>
         <ExpenseBox isIncome={true}>
-          Income<span>${income}</span>
+          Income<span>₹ {income}</span>
         </ExpenseBox>
       </ExpenseContainer>
     </Container>
