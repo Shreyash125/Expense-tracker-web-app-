@@ -1,5 +1,5 @@
 // src/App.jsx
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import styled from "styled-components";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
@@ -16,7 +16,7 @@ const Container = styled.div`
   grid-template-rows: auto 1fr; /* Content area */
   height: 100vh;
   width: 100vw;
-`;
+;`
 
 const MainContent = styled.div`
   grid-column: 2 / 3; /* Main content occupies the second column */
@@ -24,7 +24,7 @@ const MainContent = styled.div`
   padding: 20px;
   overflow-y: auto;
   transition: opacity 0.5s ease-in-out; /* Smooth transition */
-`;
+;`
 
 const App = () => {
   const [selectedTab, setSelectedTab] = useState("home");
