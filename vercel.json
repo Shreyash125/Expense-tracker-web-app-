@@ -1,5 +1,6 @@
 {
-    "routes": [{ "src": "/", "dest": "/" },
+    "routes": [{"src": "/",
+        "dest": "/"},
     { "src":"/test",
         "dest":"/"
     }]
