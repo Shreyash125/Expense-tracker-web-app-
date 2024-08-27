@@ -96,7 +96,7 @@ const SignUp = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/signup', {
+      const response = await axios.post('https://finance-traker-backend-1.onrender.com', {
         username,
         email,
         password,
