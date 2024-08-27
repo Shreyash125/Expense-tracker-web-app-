@@ -94,7 +94,7 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/login", {
+      const response = await axios.post("https://finance-traker-backend-1.onrender.com", {
         email,
         password
       });
