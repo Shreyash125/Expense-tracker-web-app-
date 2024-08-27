@@ -54,7 +54,7 @@ const HomeComponent = ({ transactions, addTransaction }) => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        'http://localhost:5000/api/transactions',
+        'https://finance-traker-backend-1.onrender.com',
         { desc, amount, type, date },
         { headers: { Authorization: `Bearer ${token}` } }
       );
